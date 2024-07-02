@@ -32,7 +32,7 @@ const AnimeItem = () => {
         setCharacters(data.data);
     }
 
-
+    //initial render 
     useEffect(()=>{
         getAnime(id);
         getCharacters(id);
@@ -83,14 +83,14 @@ const AnimeItem = () => {
                         </div>
 
                         <h3 className='inline-block text-2xl my-10 cursor-pointer bg-gradient-to-r from-purple-800 to-cyan-600 bg-clip-text text-transparent font-semibold'>Characters</h3>
-                        <div className=" grid grid-cols-autofill-150 gap-4 bg-white border-4 border-gray-300 rounded-xl p-4">
+                        <div className=" grid grid-cols-autofill-150 gap-4 bg-gray-900 border-4 border-gray-300 rounded-xl p-4">
                             {characters?.map((character, index)=>{
                                 const {role} = character;
                                 const {images, name, mal_id} = character.character;
                                 return <Link to={`/character/${mal_id}`} key={index}>
-                                    <div className='py-[0.4rem] px-[0.6rem] bg-slate-400 transition-all hover:translate-y-1 ease-in-out'>
+                                    <div className='py-[0.4rem] px-[0.6rem] bg-black transition-all hover:translate-y-1 ease-in-out'>
                                         <img className="w-full" src={images?.jpg.image_url}/>
-                                        <h4 className='py-2 text-black'>{name}</h4>
+                                        <h4 className='py-2 text-white'>{name}</h4>
                                         <p className='text-lime-400'>{role}</p>
                                     </div>
                                 </Link>
