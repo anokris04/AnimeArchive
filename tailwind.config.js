@@ -11,6 +11,7 @@ export default {
     extend: {
       gridTemplateColumns: {
         'autofill-250': 'repeat(auto-fill, minmax(250px, 1fr))',
+        'autofill-150': 'repeat(auto-fill, minmax(150px, 1fr))',
     },
   },
   plugins: [],
