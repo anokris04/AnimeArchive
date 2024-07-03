@@ -24,8 +24,8 @@ function Upcoming({rendered}) {
     }
 
     return (
-        <div className='flex'>
-            <div className="mt-[2rem] py-[2rem] pl-[5rem] w-full grid grid-cols-autofill-250 gap-8 bg-white border-black border-[5px] rounded-md">
+        <div className='flex justify-center gap-20'>
+            <div className="mt-8 py-8 px-8 w-[70%] grid grid-cols-autofill-250 gap-8 bg-emerald-800 border-4 border-black rounded-xl">
                 {conditionalRender()}
             </div>
             <Sidebar />

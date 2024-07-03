@@ -39,13 +39,13 @@ const AnimeItem = () => {
     }, [])
 
     return (
-        <div className='flex justify-center items-center'>
-            <div className='py-12 px-14 w-[80%] bg-slate-900'>
+        <div className='flex justify-center items-center bg-gradient-to-b from-teal-700 via-emerald-700 to-teal-900'>
+            <div className='py-12 px-14 w-[80%] bg-yellow-100 rounded-xl'>
                 <h1 className='inline-block text-4xl mb-10 cursor-pointer bg-gradient-to-r from-purple-800 to-cyan-600 bg-clip-text text-transparent font-bold'>{title}</h1>
-                <div className='bg-green-200 p-8 rounded-2xl border-4 border-gray-400'>
+                <div className='bg-green-200 p-8 rounded-2xl border-4 border-black'>
                     <div className="grid grid-cols-2">
                         <div className="image">
-                            <img className="rounded-md border-4 border-gray-300" src={images?.jpg.large_image_url} alt="" />
+                            <img className="rounded-md border-4 border-black" src={images?.jpg.large_image_url} alt="" />
                         </div>
                         <div className="flex flex-col justify-around">
                             <p className='flex gap-4'><span className='font-bold text-black'>Aired:</span><span>{aired?.string}</span></p>
@@ -70,7 +70,7 @@ const AnimeItem = () => {
                         <h3 className='inline-block text-2xl my-10 cursor-pointer bg-gradient-to-r from-purple-800 to-cyan-600 bg-clip-text text-transparent font-semibold'>Trailer</h3>
                         <div className="flex justify-center items-center">
                             {trailer?.embed_url && 
-                                <iframe className='p-4 outline-none border-4 border-gray-300 rounded-lg bg-white'
+                                <iframe className='p-4 outline-none border-4 border-black rounded-lg bg-green-200'
                                 src={trailer?.embed_url} 
                                 title="Inline Frame Example"
                                 width="800"
@@ -83,13 +83,13 @@ const AnimeItem = () => {
                         </div>
 
                         <h3 className='inline-block text-2xl my-10 cursor-pointer bg-gradient-to-r from-purple-800 to-cyan-600 bg-clip-text text-transparent font-semibold'>Characters</h3>
-                        <div className=" grid grid-cols-autofill-150 gap-4 bg-gray-900 border-4 border-gray-300 rounded-xl p-4">
+                        <div className=" grid grid-cols-autofill-150 gap-4 bg-green-200 border-4 border-black rounded-xl p-4">
                             {characters?.map((character, index)=>{
                                 const {role} = character;
                                 const {images, name, mal_id} = character.character;
                                 return <Link to={`/character/${mal_id}`} key={index}>
-                                    <div className='py-[0.4rem] px-[0.6rem] bg-black transition-all hover:translate-y-1 ease-in-out'>
-                                        <img className="w-full" src={images?.jpg.image_url}/>
+                                    <div className='py-[0.4rem] px-[0.6rem] bg-black rounded-lg transition-all hover:translate-y-1 ease-in-out'>
+                                        <img className="w-full rounded-md" src={images?.jpg.image_url}/>
                                         <h4 className='py-2 text-white'>{name}</h4>
                                         <p className='text-lime-400'>{role}</p>
                                     </div>

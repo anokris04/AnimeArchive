@@ -19,18 +19,18 @@ function Gallery() {
     }, [id])
 
     return (
-        <div className='bg-gray-300 min-h-[100vh] flex flex-col items-center'>
+        
+        <div className='bg-gradient-to-b from-teal-700 via-emerald-700 to-teal-900 min-h-[100vh] flex flex-col items-center'>
 
-            <div className="absolute top-8 left-8">
+            <div className="absolute top-1 right-8 border-black border-2 rounded-lg p-2 bg-green-300">
                 <Link className='font-semibold text-black flex items-center gap-[0.5rem]' to="/">
-                    <i className="fas fa-arrow-left"></i>
                     Back to Home
                 </Link>
             </div>
-            <div className="inline-block p-8 my-[2rem] bg-slate-300 rounded-lg border-[5px] border-black relative">
+            <div className="inline-block p-8 my-[2rem] bg-green-200 rounded-lg border-[5px] border-black relative">
                 <img className="width-[250px]" src={pictures[index]?.jpg.image_url} alt="" />
             </div>
-            <div className="flex flex-wrap gap-[0.5rem] w-[80%] p-8 border-[5px] border-black rounded-lg">
+            <div className="flex flex-wrap gap-[0.5rem] w-[80%] p-8 border-[5px] bg-green-200 border-black rounded-lg">
                 {pictures?.map((picture, i) => {
                     return <div className="image-con" onClick={()=>{
                         handleImageClick(i)

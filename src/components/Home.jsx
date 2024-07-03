@@ -31,10 +31,10 @@ const Home = () => {
         }
     }
     return (
-    <div className='bg-gray-500'>
+    <div className='bg-gradient-to-b from-teal-700 via-emerald-700 to-teal-900'>
       <header className='py-8 px-20 w-[60%] my-0 mx-auto transition-all ease-in-out'>
         <div className="flex items-center justify-center mb-8">
-            <h1 className='text-4xl font-bold text-gray-800'>
+            <h1 className='text-5xl font-bold text-slate-950'>
                 {rendered == 'popular' ? 'Popular Anime':
                 rendered == 'airing' ? 'Airing Anime': 'Upcoming Anime'}
             </h1>
@@ -43,7 +43,7 @@ const Home = () => {
             <div className='filter-btn popular-filter'>
                 <button className="flex items-center gap-2 py-1 px-2 outline-none border-2 border-black rounded-lg text-md bg-white hover:bg-slate-400" onClick={()=>{
                     setRendered('popular');
-                }}>Popular<i className="fas fa-fire"></i>
+                }}>Popular
                 </button>
             </div>
             <form action="" className="relative w-full">

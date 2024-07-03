@@ -21,7 +21,7 @@ const Popular = () => {
 
   return (
     <div className='flex justify-center'>
-      <div className='mt-8 py-8 px-10 w-[80%] grid grid-cols-autofill-250 gap-8 bg-emerald-800 border-4 border-black rounded-xl'>
+      <div className='mt-8 py-8 px-8 w-[80%] grid grid-cols-autofill-250 gap-8 bg-emerald-800 border-4 border-black rounded-xl'>
         {conditionalRender()}
       </div>
     </div>

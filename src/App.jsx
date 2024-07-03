@@ -8,7 +8,7 @@ import Name from "./components/Name";
 function App() {
 
   return (
-    <div className='m-0 p-0 bg-gradient-to-b from-teal-700 via-emerald-700 to-teal-900'>
+    <div>
       <Name/>
       <BrowserRouter>
         <Routes>
